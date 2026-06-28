@@ -85,3 +85,15 @@ const memories = [
         textDisplay.classList.add('special-ending');
       }
     });
+
+const muteBtn = document.getElementById('mute-btn');
+
+muteBtn.addEventListener('click', () => {
+  if (bgMusic.muted) {
+    bgMusic.muted = false;
+    muteBtn.textContent = '🔊'; 
+  } else {
+    bgMusic.muted = true;
+    muteBtn.textContent = '🔇'; 
+  }
+});
