@@ -41,6 +41,8 @@ const memories = [
       text: "Today is your day. And you are so special. I am so lucky to have you in my life. I love you ❤️, Happy Birthday 🎂 My Puchku Sona 💖",
       img: "./BD IMG/Cake.png"
     };
+      const bgMusic = document.getElementById('bg-music');
+      bgMusic.volume = 0.20;
 
     const btn = document.getElementById('generate-btn');
     const titleDisplay = document.getElementById('main-title')
@@ -51,6 +53,9 @@ const memories = [
     let currentIndex = 0;
 
     btn.addEventListener('click', () => {
+      if (bgMusic.paused) {
+            bgMusic.play();
+        }
       
       if (currentIndex < memories.length) {
         const currentMemory = memories[currentIndex];
